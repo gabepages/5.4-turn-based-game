@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-
     <h1 id='title'>Battle of the Goats</h1>
-
     <div class="container">
       <div class="row battle-ground">
+        <div class="row start-button">
+          <button id='start' type="button" class="btn btn-default">Start Round!</button>
+        </div>
         <div class="col-md-4 hero">
           <div class="panel panel-default">
             <div class="panel-heading hero-name">
@@ -29,8 +30,10 @@
                 </div>
               </div>
               <div class="panel panel-default">
-                <div class="panel-body content-section-hero">
+                <div class="panel-body">
+                    <div class="alert alert-success content-section-hero" role="alert">
 
+                    </div>
                 </div>
               </div>
             </div>
@@ -55,19 +58,22 @@
                 </div>
               </div>
               <div class="panel panel-default">
-                <div class="panel-body content-section-enemy">
+                <div class="panel-body">
+                  <div class="alert alert-danger content-section-enemy" role="alert">
 
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-      <div class="row start-button">
-        <button id='start'type="button" class="btn btn-default">Start Round!</button>
-      </div>
+
     </div>
+
+
+
+
     <h3 id='footer'>&copy; Gabe Pages</h3>
     <script src="js/bundle.js"></script>
   </body>

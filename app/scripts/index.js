@@ -17,6 +17,7 @@ function unbindIt(){
 
 function heroAttack(){
   unbindIt();
+  disableBtn();
   var randomNum = _.random(0,10);
   $('.content-section-enemy').append('<p>"BAHHHHH! You attacked me!!!"</p>' + '( -' + randomNum + '%)');
   var progBarStat = $('#enemy-prog-bar').html();
@@ -50,4 +51,20 @@ function enemyAttack(){
 function clearFields(){
   $('.content-section-enemy').html('');
   $('.content-section-hero').html('');
+  activeBtn();
 }
+
+
+function disableBtn(){
+  $('#start').addClass('disabled');
+}
+
+
+function activeBtn(){
+  $('#start').removeClass('disabled');
+}
+
+$('#charactermenu-hero').on('click', function (){
+    $('.dropdown-toggle').dropdown();
+
+})

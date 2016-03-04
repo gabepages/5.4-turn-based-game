@@ -18,22 +18,48 @@ img {
 }
 
 body{
-  background: url('../../app/images/backgroundgoat.jpg')center  no-repeat;
+  background: url('../../app/images/backgroundgoat.jpg')center no-repeat;
   background-size: cover;
+  &::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(50, 50, 50, 0.6);
+}
 }
 
 #title{
+  font-family: Sigmar One;
   text-align: center;
   background-color: rgba(8, 8, 8, 0.95);
   color: rgba(255, 255, 255, 0.8);
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  letter-spacing: 8px;
   padding: 15px 0 20px 0;
-  // color: rgba(93, 174, 242, 1);
+  position: relative;
 }
 
+
+.hide-list{
+  display: none;
+}
+
+
+
+
+
+
+/*********
+Battle page
+**********/
+
 .battle-ground{
-  margin-top: 50px;
+  position: relative;
+  margin-top: 15px;
 }
 
 .middle{
@@ -117,14 +143,15 @@ body{
 }
 
 .start-button{
+  margin-bottom: 40px;
   text-align: center;
-
+  position: relative;
   #start{
     font-size: 30px;
     // font-weight: bold;
     font-family: Sigmar One;
     text-align: center;
-    width: 50%;
+    width: 40%;
     background-color:rgba(37, 69, 39, 0.9);
     color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);
