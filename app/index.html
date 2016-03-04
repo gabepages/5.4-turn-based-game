@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>5.4 turn based game</title>
+    <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <h1 id='title'>Battle of the Goats</h1>
+
+    <div class="container">
+      <div class="row battle-ground">
+        <div class="col-md-4 hero">
+          <div class="panel panel-default">
+            <div class="panel-heading hero-name">
+              <h3 class='panel-title'>"Blazing Bernie"</h3>
+            </div>
+            <div class="panel-body">
+              <img src="../app/images/hero.gif" alt="">
+              <img class='health-symbol' src="../app/images/health.png" alt="">
+              <div class="panel panel-default">
+                <div class="panel-body hero-health">
+                  <div class="progress prog-bar">
+                    <div class="progress-bar" id='hero-prog-bar' role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">100%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-body content-section-hero">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 middle">
+          <p>VS.</p>
+        </div>
+        <div class="col-md-4 enemy">
+          <div class="panel panel-default">
+            <div class="panel-heading enemy-name">
+              <h3 class='panel-title'>'Sarring Suzie'</h3>
+            </div>
+            <div class="panel-body">
+              <img src="../app/images/enemy.gif" alt="">
+              <img class='health-symbol' src="../app/images/health.png" alt="">
+              <div class="panel panel-default">
+                <div class="panel-body enemy-health">
+                  <div class="progress prog-bar">
+                    <div class="progress-bar" id='enemy-prog-bar' role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">100%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-body content-section-enemy">
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row start-button">
+        <button id='start'type="button" class="btn btn-default">Start Round!</button>
+      </div>
+    </div>
+    <h3 id='footer'>&copy; Gabe Pages</h3>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

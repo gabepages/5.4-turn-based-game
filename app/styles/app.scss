@@ -1,0 +1,145 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+$grid-gutter-width: 15px;
+$container-large-desktop: (980px);
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body{
+  background: url('../../app/images/backgroundgoat.jpg')center  no-repeat;
+  background-size: cover;
+}
+
+#title{
+  text-align: center;
+  background-color: rgba(8, 8, 8, 0.95);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 15px 0 20px 0;
+  // color: rgba(93, 174, 242, 1);
+}
+
+.battle-ground{
+  margin-top: 50px;
+}
+
+.middle{
+  text-align: center;
+    margin: 176px 0 0 0;
+    p{
+    font-family: Helvetica;
+    font-style: italic;
+    height: 75px;
+    width: 105px;
+    font-size: 50px;
+    background-color: rgba(8, 8, 8, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+  }
+}
+
+.hero,
+.enemy{
+  text-align: center;
+}
+
+
+.hero{
+  .hero-name{
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: Helvetica;
+  }
+  img{
+    width:250px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  #hero-prog-bar{
+    background-color: rgba(0, 217, 90, 1);
+    width: 100%;
+  }
+  .health-symbol{
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin: 13px 5px 0 5px;
+  }
+  .content-section-hero{
+    height:80px;
+  }
+}
+
+.enemy{
+  .enemy-name{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    text-decoration: underline;
+  }
+  img{
+    width:250px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  #enemy-prog-bar{
+    background-color: rgba(225, 60, 56, 1);
+    width: 100%;
+  }
+  .health-symbol{
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin: 13px 5px 0 5px;
+  }
+  .content-section-enemy{
+    height:80px;
+  }
+}
+
+.prog-bar{
+  margin: 0;
+  min-width: 30px;
+}
+
+.start-button{
+  text-align: center;
+
+  #start{
+    font-size: 30px;
+    // font-weight: bold;
+    font-family: Sigmar One;
+    text-align: center;
+    width: 50%;
+    background-color:rgba(37, 69, 39, 0.9);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    height: 55px;
+  }
+}
+
+#footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(8, 8, 8, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 200px;
+  margin-bottom: 0px;
+  padding: 15px 0 20px 0;
+}
