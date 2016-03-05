@@ -27,31 +27,176 @@ body{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(50, 50, 50, 0.6);
+  background: rgba(50, 50, 50, 0.6);
 }
 }
 
-#title{
-  font-family: Sigmar One;
+
+.header{
+  position: relative;
   text-align: center;
   background-color: rgba(8, 8, 8, 0.95);
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 0;
-  margin-bottom: 40px;
-  letter-spacing: 8px;
-  padding: 15px 0 20px 0;
-  position: relative;
+  .header-content{
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+  #title{
+    margin: 0 auto;
+    display: inline-block;
+    font-family: Sigmar One;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 8px;
+    padding: 15px 0 20px 50px;
+    position: relative;
+  }
+  .home-button{
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: 18px;
+    a{
+      margin: 22px 0 0 0;
+      button{
+        background-color: rgba(255, 255, 255, 0.8);
+        color: rgba(8, 8, 8, 0.95);
+        padding: 0px 15px 0px 15px;
+        height: 35px;
+        &:hover{
+        color:  rgba(255, 255, 255, 0.8);
+        background-color: rgba(8, 8, 8, 0.5);
+        }
+      }
+    }
+  }
+}
+}
+
+h3{
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.home-panels{
+  background-color: rgba(65,65,65, 0.8);
+  border: 1px solid rgba(200, 200, 200, 0.6);
+  .choose-header-enemy{
+    background-color: rgba(45, 45, 45, 0.8);
+  }
+  .choose-header-hero{
+    background-color: rgba(45, 45, 45, 0.8);
+  }
+}
+
+.replace-with-enemy-pic{
+  .character-title{
+    float: right;
+    margin: 65px 45px;
+  }
+  img{
+    margin: 10px auto;
+    height:150px;
+    width:150px;
+  }
+}
+
+.replace-with-hero-pic{
+  .character-title{
+    float: right;
+    margin: 65px 45px;
+  }
+  img{
+    margin: 10px auto;
+    height:150px;
+    width:150px;
+  }
+}
+
+.choose-powers{
+  color: rgba(255, 255, 255, 0.9);
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+      font-size: 16px;
+      color: lightgray;
+      font-family: Helvetica;
+    label{
+        margin-left: 8px;
+      }
+    }
+  }
 }
 
 
-.hide-list{
-  display: none;
+.theme{
+  color: rgba(255, 255, 255, 0.9);
+  ul {
+    padding: 0;
+
+    li{
+      cursor: pointer;
+      margin-right: 5px;
+      border-radius: 5px;
+      padding: 20px;
+      display: inline-block;
+      list-style: none;
+      border: 1px solid black;
+    }
+    .color1{
+      background-color: rgba(252, 189, 0, 1);
+    }
+    .color2{
+      background-color: rgba(56, 99, 157, 1);
+
+    }
+    .color3{
+      background-color: rgba(119, 48, 160, 1);
+
+    }
+    .color4{
+      background-color: rgba(122, 58, 61, 1);
+
+    }
+  }
+}
+
+.choose-header-hero{
+  background-color: rgba(0, 217, 90, 1);
+  h2{
+    text-align: center;
+    font-size: 25px;
+    font-family: Sigmar One;
+    color: rgba(0, 217, 90, 1);
+    text-transform: uppercase;
+  }
+}
+
+.choose-header-enemy{
+  h2{
+    text-align: center;
+    font-size: 25px;
+    font-family: Sigmar One;
+    color: rgba(225, 60, 56, 1);
+    text-transform: uppercase;
+  }
 }
 
 
+.filter{
+  margin-top: 50px;
+}
 
 
-
+.go-btn{
+  button{
+  width:100%;
+  height: 100px;
+  font-size: 45px;
+  background-color: rgba(65,65,65, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  font-family:  Sigmar One;
+  }
+}
 
 /*********
 Battle page
@@ -159,14 +304,15 @@ Battle page
   }
 }
 
+
+
 #footer{
-  position: absolute;
-  bottom: 0px;
+  position: relative;
   width: 100%;
+  margin-top: 100px;;
   text-align: center;
   background-color: rgba(8, 8, 8, 0.8);
   color: rgba(255, 255, 255, 0.8);
-  margin-top: 200px;
   margin-bottom: 0px;
   padding: 15px 0 20px 0;
 }

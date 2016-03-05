@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var _ = require('underscore');
-
+var handlebars = require('handlebars');
+var home = require('./home');
 
 $('#start').on('click',function(){
   $('#start').trigger('hero attacked');
@@ -63,8 +64,3 @@ function disableBtn(){
 function activeBtn(){
   $('#start').removeClass('disabled');
 }
-
-$('#charactermenu-hero').on('click', function (){
-    $('.dropdown-toggle').dropdown();
-
-})
