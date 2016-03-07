@@ -58,7 +58,7 @@ var characterData = [
 ];
 
 var powerData ={
-  headButt: '../app/images/attacks/headshot.gif',
+  headButt: '../app/images/attacks/headbut.gif',
   superSpit: '../app/images/attacks/superspit.gif',
   lowerBodyAttack: '../app/images/attacks/lowerbodyattack.gif',
   crippler: '../app/images/attacks/crippler.gif',
