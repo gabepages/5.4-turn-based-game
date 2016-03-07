@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+
+    <audio id="startGame" src="audio/background.wav" type="audio/wav"></audio>
+    <audio id="attack" src="audio/attack.wav" type="audio/wav"></audio>
+    <audio id="winGane" src="audio/win.wav" type="audio/wav"></audio>
+
+
+
+
     <div class='header'>
       <div class="header-content">
         <h1 id='title'>Battle of the Goats</h1>
@@ -28,7 +36,7 @@
             <div class="panel-body">
               <h3>Character</h3>
               <div class="dropdown choose-hero">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuHero" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuHero" aria-haspopup="true" aria-expanded="false">
                   Dropdown
                   <span class="caret"></span>
                 </button>
@@ -40,7 +48,7 @@
                 </ul>
               </div>
               <div class="replace-with-hero-pic"></div>
-              <h3>Choose Powers (Select 2) :</h3>
+              <h3>Choose Power (Select 1) :</h3>
               <div class="choose-powers">
                 <ul>
                   <li>
@@ -83,7 +91,7 @@
             <div class="panel-body">
               <h3>Character</h3>
               <div class="dropdown choose-enemy">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuEnemy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuEnemy"  aria-haspopup="true" aria-expanded="false">
                   Dropdown
                   <span class="caret"></span>
                 </button>
@@ -108,19 +116,19 @@
 
           </div>
           <div class="go-btn">
-            <a href="battle.html">
+            <a href="#">
               <button id='battle-btn' type="button" class="btn btn-default">Battle!</button>
             </a>
           </div>
         </div>
 
       </div>
-      <div class="row">
 
-      </div>
     </div>
 
     <h3 id='footer'>&copy; Gabe Pages</h3>
+
+
     <script id='themeChosen' type="text/x-handlebars-template">
       <li id="{{color}}" class='{{name}}'></li>
     </script>
@@ -128,6 +136,99 @@
       <img id='getImage' src="{{imageUrl}}" alt="">
       <h3 id='getName' class='character-title'>"{{name}}"</h3>
     </script>
+    <script id='heroAndVs-template' type='text/x-handlebars-template'>
+      <div class="row battle-ground">
+        <div class="row start-button">
+          <button id='start' type="button" class="btn btn-default">Start Round!</button>
+        </div>
+        <div class="col-md-4 hero hero-template">
+          <div class="panel panel-default">
+            <div class="panel-heading hero-name">
+              <h3 class='panel-title'>"{{name}}"</h3>
+            </div>
+            <div class="panel-body">
+              <img src="{{image}}" alt="">
+              <img class='health-symbol' src="../app/images/health.png" alt="">
+              <div class="panel panel-default">
+                <div class="panel-body hero-health">
+                  <div class="progress prog-bar">
+                    <div class="progress-bar" id='hero-prog-bar' role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">100%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="alert alert-success content-section-hero" role="alert">
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 middle">
+          <p>VS.</p>
+        </div>
+        <div id='powerModal' class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title modal-header">{{powers}} Attack!!!</h4>
+              </div>
+              <div class="modal-body modal-image">
+                <img src="{{powerUrl}}" alt="">
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </script>
+    <script id='enemy-template' type="text/x-handlebars-template">
+
+        <div class="col-md-4 enemy enemy-template">
+          <div class="panel panel-default">
+            <div class="panel-heading enemy-name">
+              <h3 class='panel-title'>{{name}}</h3>
+            </div>
+            <div class="panel-body">
+              <img src="{{image}}" alt="">
+              <img class='health-symbol' src="../app/images/health.png" alt="">
+              <div class="panel panel-default">
+                <div class="panel-body enemy-health">
+                  <div class="progress prog-bar">
+                    <div class="progress-bar" id='enemy-prog-bar' role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">100%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="alert alert-danger content-section-enemy" role="alert">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="js/bundle.js"></script>
   </body>
 </html>

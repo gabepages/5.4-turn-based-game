@@ -5827,6 +5827,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    height: 100%;
     background: rgba(50, 50, 50, 0.6); }
 
 .header {
@@ -5974,10 +5975,12 @@ Battle page
   text-align: center; }
 
 .hero .hero-name {
-  font-size: 25px;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
-  text-decoration: underline;
+  font-weight: bold;
   font-family: Helvetica; }
+  .hero .hero-name h3 {
+    font-size: 24px; }
 .hero img {
   width: 250px;
   height: 200px;
@@ -5994,10 +5997,12 @@ Battle page
   height: 80px; }
 
 .enemy .enemy-name {
-  font-size: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
   text-transform: uppercase;
-  font-family: Helvetica;
-  text-decoration: underline; }
+  font-family: Helvetica; }
+  .enemy .enemy-name h3 {
+    font-size: 24px; }
 .enemy img {
   width: 250px;
   height: 200px;
@@ -6031,10 +6036,17 @@ Battle page
     border: 1px solid white;
     height: 55px; }
 
+.modal-header {
+  text-align: center;
+  font-family: Sigmar One; }
+
+.modal-image {
+  text-align: center; }
+
 #footer {
   position: relative;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 183px;
   text-align: center;
   background-color: rgba(8, 8, 8, 0.8);
   color: rgba(255, 255, 255, 0.8);

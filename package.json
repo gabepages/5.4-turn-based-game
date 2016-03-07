@@ -4,9 +4,9 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    
+
     "bootstrap-sass": "^3.3.6",
-    
+
     "git-directory-deploy": "^1.4.0",
     "autoprefixer": "^6.3.3",
     "browserify-shim": "^3.8.12",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "html": "cp app/*.html dist/",
-
+    "audio":"cp app/audio/*.wav dist/audio/",
     "scss": "sass --style compressed --update app/styles:dist/css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
 
@@ -47,8 +47,9 @@
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
     "watch:html": "npm run html && onchange 'app/**/*.html' -- npm run html",
+    "watch:audio": "npm run audio && onchange 'app/audio/*.wav' -- npm run audio",
     "server": "live-server --open='dist'",
-    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
+    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:js' 'npm run watch:audio' 'npm run server'"
   },
   "browserify": {
     "transform": [ "browserify-shim", "strictify" ]
